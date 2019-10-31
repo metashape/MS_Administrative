@@ -46,10 +46,16 @@ public class InicialPage extends javax.swing.JFrame {
     /**
      * Creates new form login
      */
+    
+   
+    
     public InicialPage() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/image/ms-icon.png")).getImage());
+        
     }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,6 +67,7 @@ public class InicialPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel9 = new JLabel();
+        txtConectadoComo = new JLabel();
         jLabel1 = new JLabel();
         ImageIcon icon = new ImageIcon(getClass().getResource("/image/bg_4.jpg"));
         Image image = icon.getImage();
@@ -105,6 +112,11 @@ public class InicialPage extends javax.swing.JFrame {
 
         jLabel9.setIcon(new ImageIcon(getClass().getResource("/image/ms-icon.png"))); // NOI18N
         getContentPane().add(jLabel9, new AbsoluteConstraints(0, 330, 310, 320));
+
+        txtConectadoComo.setBackground(new Color(255, 255, 255));
+        txtConectadoComo.setForeground(new Color(255, 255, 255));
+        txtConectadoComo.setText("Conectado como: ");
+        getContentPane().add(txtConectadoComo, new AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel1.setIcon(new ImageIcon(getClass().getResource("/image/bg_4.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new AbsoluteConstraints(0, 0, 1050, 650));
@@ -409,6 +421,9 @@ public class InicialPage extends javax.swing.JFrame {
         });
     }
 
+    public void recebe(String nome){
+        txtConectadoComo.setText("Conectado como: " + nome);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private JMenu cadastrarLoja;
     private JDesktopPane jDesktopPane1;
@@ -438,5 +453,11 @@ public class InicialPage extends javax.swing.JFrame {
     private JMenuItem jMenuItem4;
     private JMenuItem jMenuItem5;
     private JMenuItem jMenuItem6;
+    private JLabel txtConectadoComo;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the nome
+     */
+  
 }
