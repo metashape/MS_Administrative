@@ -1,40 +1,25 @@
 package metashape;
 
-public class Funcionario {
+import java.util.ArrayList;
+import java.util.Date;
 
-    private int id_user;
-    private String user;
-    private String senha;
-    private Departamento[] permissions;
-
-    public Funcionario(String user, String senha, Departamento[] permissions) {
-        this.user = user;
-        this.senha = senha;
-        this.permissions = permissions;
+public class Funcionario extends Usuario {
+    private ArrayList<Departamento> permissions;
+    private float salario;
+    private int diastrabalhados;
+    private float horasTrabalhadas;
+    private float outrosGanhos;
+    private float outrosGastos;
+    private int advetencias;
+    private ArrayList<String> comentarios;
+    
+    
+    
+    
+    public Funcionario(String user, String senha, String nome, String sobrenome, String contato, String email, int sexo, Date nascimento, String endereco) {
+        super(user, senha, nome, sobrenome, contato, email, sexo, nascimento, endereco);
     }
+    
 
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public Departamento[] getPermissions() {
-        return permissions;
-    }
-
-    public void setPermissions(Departamento[] permissions) {
-        this.permissions = permissions;
-    }
-            
+    
 }

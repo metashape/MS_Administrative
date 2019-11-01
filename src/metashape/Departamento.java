@@ -5,10 +5,13 @@ import java.util.ArrayList;
 
 public class Departamento {
     private int id_departamento;
-    private String nome;
-    private int qtdFincionarios;
-    private Funcionario master;
-    private ArrayList<Departamento> departamentos;
+    private String nome_departamento;
+    private boolean acesso;
+    private boolean cadastrar;
+    private boolean buscar;
+    private boolean editar;
+    private ArrayList<Funcionario> funcionario;
+    
     
     
 }
