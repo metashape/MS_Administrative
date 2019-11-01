@@ -56,9 +56,13 @@ public class login extends javax.swing.JFrame {
         jLabel2 = new JLabel();
         jLabel3 = new JLabel();
         jTextField2 = new JTextField();
+        jPasswordField1 = new JPasswordField();
+        jCheckBox7 = new JCheckBox();
+        jButton1 = new JButton();
         jTextField4 = new JTextField();
-        jCheckBox1 = new JCheckBox();
+        jPasswordField2 = new JPasswordField();
         jCheckBox2 = new JCheckBox();
+        jCheckBox1 = new JCheckBox();
         jCheckBox3 = new JCheckBox();
         jCheckBox4 = new JCheckBox();
         jCheckBox5 = new JCheckBox();
@@ -67,18 +71,14 @@ public class login extends javax.swing.JFrame {
         jLabel5 = new JLabel();
         jLabel6 = new JLabel();
         jLabel7 = new JLabel();
-        jCheckBox7 = new JCheckBox();
-        jButton1 = new JButton();
-        jCheckBox8 = new JCheckBox();
         jCheckBox9 = new JCheckBox();
+        jCheckBox8 = new JCheckBox();
         jLabel8 = new JLabel();
         jCheckBox10 = new JCheckBox();
         jCheckBox11 = new JCheckBox();
         jLabel10 = new JLabel();
-        jButton2 = new JButton();
-        jPasswordField1 = new JPasswordField();
-        jPasswordField2 = new JPasswordField();
         jPasswordField3 = new JPasswordField();
+        jButton2 = new JButton();
         jLabel13 = new JLabel();
         jLabel1 = new JLabel();
         jLabel11 = new JLabel();
@@ -95,13 +95,26 @@ public class login extends javax.swing.JFrame {
 
         jLabel3.setText("CADASTRO");
 
+        jPasswordField1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox7.setText("Permanecer conectado");
+
+        jButton1.setText("Entrar");
+        jButton1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         jTextField4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
-
-        jCheckBox1.setText("Personais");
 
         jCheckBox2.setText("Lojas");
         jCheckBox2.addActionListener(new ActionListener() {
@@ -109,6 +122,8 @@ public class login extends javax.swing.JFrame {
                 jCheckBox2ActionPerformed(evt);
             }
         });
+
+        jCheckBox1.setText("Personais");
 
         jCheckBox3.setText("Produtos");
 
@@ -136,14 +151,7 @@ public class login extends javax.swing.JFrame {
 
         jLabel7.setText("Senha");
 
-        jCheckBox7.setText("Permanecer conectado");
-
-        jButton1.setText("Entrar");
-        jButton1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jCheckBox9.setText("Cadastrar");
 
         jCheckBox8.setText("Gerenciar");
         jCheckBox8.addActionListener(new ActionListener() {
@@ -151,8 +159,6 @@ public class login extends javax.swing.JFrame {
                 jCheckBox8ActionPerformed(evt);
             }
         });
-
-        jCheckBox9.setText("Cadastrar");
 
         jLabel8.setText("Permissões");
 
@@ -168,12 +174,6 @@ public class login extends javax.swing.JFrame {
         jLabel10.setText("ADM ");
 
         jButton2.setText("Cadastrar");
-
-        jPasswordField1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
-            }
-        });
 
         jLabel13.setBackground(new Color(0, 0, 0));
         jLabel13.setForeground(new Color(0, 0, 0));

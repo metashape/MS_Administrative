@@ -366,16 +366,16 @@ public class InicialPage extends javax.swing.JFrame {
 
     private void jMenuItem13ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
         // TODO add your handling code here:
-        CadastroCupom telaCadCupom = new CadastroCupom();
-        jDesktopPane1.add(telaCadCupom);
-        telaCadCupom.setVisible(true);
+        CadastroLoja telaCadLoja = new CadastroLoja();
+        jDesktopPane1.add(telaCadLoja);
+        telaCadLoja.setVisible(true);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem2ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        BuscarProduto telaBuscarProduto = new BuscarProduto();
-        jDesktopPane1.add(telaBuscarProduto);
-        telaBuscarProduto.setVisible(true);
+       BuscarLoja telaBuscarLoja = new BuscarLoja();
+        jDesktopPane1.add(telaBuscarLoja);
+        telaBuscarLoja.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem11ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed

@@ -50,8 +50,8 @@ public class BuscarLoja extends javax.swing.JInternalFrame {
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setDisplayedMnemonic('C');
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("CADASTRO PRODUTO");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, -1, -1));
+        jLabel3.setText("BUSCAR LOJA");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
 
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
