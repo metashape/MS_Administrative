@@ -1,26 +1,51 @@
 package br.com.metashape.funcionarios;
 
 import br.com.metashape.utils.Usuario;
-import java.util.ArrayList;
-import java.util.Date;
-
+/**
+ *
+ * @author pedrobertolini
+ */
 public class Funcionario extends Usuario {
-  /*  private ArrayList<Departamento> permissions;
+  
+    private String matricula;
+    private String especialidade;
     private float salario;
-    private int diastrabalhados;
-    private float horasTrabalhadas;
-    private float outrosGanhos;
-    private float outrosGastos;
-    private int advetencias;
-    private ArrayList<String> comentarios;
-    
-    
-    
-    
-    public Funcionario(String user, String senha, String nome, String sobrenome, String contato, String email, int sexo, Date nascimento, String endereco) {
-        super(user, senha, nome, sobrenome, contato, email, sexo, nascimento, endereco);
+
+      public Funcionario(String matricula, String especialidade, float salario, String nome, String email, String senha) {
+        super(nome, email, senha);
+        this.matricula = matricula;
+        this.especialidade = especialidade;
+        this.salario = salario;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
+    }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" + "matricula=" + matricula + ", especialidade=" + especialidade + ", salario=" + salario + '}';
     }
     
-
-    */
+    
 }

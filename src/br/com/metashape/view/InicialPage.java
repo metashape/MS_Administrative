@@ -81,26 +81,15 @@ public class InicialPage extends javax.swing.JFrame {
         cadastrarLoja = new JMenu();
         jMenuItem1 = new JMenuItem();
         jMenuItem2 = new JMenuItem();
-        jMenuItem3 = new JMenuItem();
         jMenu4 = new JMenu();
         jMenuItem10 = new JMenuItem();
         jMenuItem11 = new JMenuItem();
-        jMenuItem12 = new JMenuItem();
         jMenu2 = new JMenu();
         jMenuItem4 = new JMenuItem();
         jMenuItem5 = new JMenuItem();
-        jMenuItem6 = new JMenuItem();
-        jMenu7 = new JMenu();
-        jMenuItem13 = new JMenuItem();
-        jMenuItem14 = new JMenuItem();
         jMenu5 = new JMenu();
-        jMenuItem16 = new JMenuItem();
-        jMenuItem17 = new JMenuItem();
-        jMenuItem18 = new JMenuItem();
         jMenuItem19 = new JMenuItem();
-        jMenuItem20 = new JMenuItem();
         jMenuItem21 = new JMenuItem();
-        jMenu6 = new JMenu();
         jMenu8 = new JMenu();
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -149,16 +138,6 @@ public class InicialPage extends javax.swing.JFrame {
         });
         cadastrarLoja.add(jMenuItem2);
 
-        jMenuItem3.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_MASK));
-        jMenuItem3.setIcon(new ImageIcon(getClass().getResource("/image/editIcon.png"))); // NOI18N
-        jMenuItem3.setText("Editar");
-        jMenuItem3.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        cadastrarLoja.add(jMenuItem3);
-
         jMenuBar1.add(cadastrarLoja);
 
         jMenu4.setIcon(new ImageIcon(getClass().getResource("/image/ProductIcon.png"))); // NOI18N
@@ -184,20 +163,10 @@ public class InicialPage extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem11);
 
-        jMenuItem12.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_MASK));
-        jMenuItem12.setIcon(new ImageIcon(getClass().getResource("/image/editIcon.png"))); // NOI18N
-        jMenuItem12.setText("Editar");
-        jMenuItem12.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                jMenuItem12ActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItem12);
-
         jMenuBar1.add(jMenu4);
 
         jMenu2.setIcon(new ImageIcon(getClass().getResource("/image/ProfissionalIcon.png"))); // NOI18N
-        jMenu2.setText("Treinadores / Nutricionistas");
+        jMenu2.setText("Treinadores / Nutricionistas / Funcionarios");
 
         jMenuItem4.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
         jMenuItem4.setIcon(new ImageIcon(getClass().getResource("/image/createIcon.png"))); // NOI18N
@@ -214,75 +183,15 @@ public class InicialPage extends javax.swing.JFrame {
         jMenuItem5.setText("Buscar");
         jMenu2.add(jMenuItem5);
 
-        jMenuItem6.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_MASK));
-        jMenuItem6.setIcon(new ImageIcon(getClass().getResource("/image/editIcon.png"))); // NOI18N
-        jMenuItem6.setText("Editar");
-        jMenuItem6.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem6);
-
         jMenuBar1.add(jMenu2);
 
-        jMenu7.setIcon(new ImageIcon(getClass().getResource("/image/CuponIcon.png"))); // NOI18N
-        jMenu7.setText("Cupons");
-
-        jMenuItem13.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
-        jMenuItem13.setIcon(new ImageIcon(getClass().getResource("/image/createIcon.png"))); // NOI18N
-        jMenuItem13.setText("Cadastrar");
-        jMenuItem13.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
-            }
-        });
-        jMenu7.add(jMenuItem13);
-
-        jMenuItem14.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
-        jMenuItem14.setIcon(new ImageIcon(getClass().getResource("/image/searchIcon.png"))); // NOI18N
-        jMenuItem14.setText("Buscar");
-        jMenu7.add(jMenuItem14);
-
-        jMenuBar1.add(jMenu7);
-
         jMenu5.setIcon(new ImageIcon(getClass().getResource("/image/FinancialIcon.png"))); // NOI18N
-        jMenu5.setText("Financeiro");
-
-        jMenuItem16.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_G, InputEvent.CTRL_MASK));
-        jMenuItem16.setIcon(new ImageIcon(getClass().getResource("/image/HealthIcon.png"))); // NOI18N
-        jMenuItem16.setText("Geral");
-        jMenu5.add(jMenuItem16);
-
-        jMenuItem17.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_MASK));
-        jMenuItem17.setIcon(new ImageIcon(getClass().getResource("/image/AtiveFinanceIcon.png"))); // NOI18N
-        jMenuItem17.setText("Ativos");
-        jMenuItem17.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                jMenuItem17ActionPerformed(evt);
-            }
-        });
-        jMenu5.add(jMenuItem17);
-
-        jMenuItem18.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK));
-        jMenuItem18.setIcon(new ImageIcon(getClass().getResource("/image/PassiveFinanceIcon.png"))); // NOI18N
-        jMenuItem18.setText("Passivos");
-        jMenu5.add(jMenuItem18);
+        jMenu5.setText("Administrativo");
 
         jMenuItem19.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_MASK));
         jMenuItem19.setIcon(new ImageIcon(getClass().getResource("/image/SubstoreIcon.png"))); // NOI18N
         jMenuItem19.setText("Estoque");
         jMenu5.add(jMenuItem19);
-
-        jMenuItem20.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, InputEvent.CTRL_MASK));
-        jMenuItem20.setIcon(new ImageIcon(getClass().getResource("/image/MovimentationIcon.png"))); // NOI18N
-        jMenuItem20.setText("Movimentação");
-        jMenuItem20.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                jMenuItem20ActionPerformed(evt);
-            }
-        });
-        jMenu5.add(jMenuItem20);
 
         jMenuItem21.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B, InputEvent.CTRL_MASK));
         jMenuItem21.setIcon(new ImageIcon(getClass().getResource("/image/BalanceIcon.png"))); // NOI18N
@@ -290,10 +199,6 @@ public class InicialPage extends javax.swing.JFrame {
         jMenu5.add(jMenuItem21);
 
         jMenuBar1.add(jMenu5);
-
-        jMenu6.setIcon(new ImageIcon(getClass().getResource("/image/AdministrativeIcon.png"))); // NOI18N
-        jMenu6.setText("Administrativo");
-        jMenuBar1.add(jMenu6);
 
         jMenu8.setIcon(new ImageIcon(getClass().getResource("/image/ExitIcon.png"))); // NOI18N
         jMenu8.setText("Sair");
@@ -304,14 +209,6 @@ public class InicialPage extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem17ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem17ActionPerformed
-
-    private void jMenuItem20ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem20ActionPerformed
 
     private void cadastrarLojaActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cadastrarLojaActionPerformed
         // TODO add your handling code here:        
@@ -328,13 +225,6 @@ public class InicialPage extends javax.swing.JFrame {
         telaCadLoja.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem3ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-        EditarLoja telaEditLoja = new EditarLoja();
-        jDesktopPane1.add(telaEditLoja);
-        telaEditLoja.setVisible(true);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
     private void jMenuItem10ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
         CadastroProduto telaCadProduto = new CadastroProduto();
@@ -342,33 +232,12 @@ public class InicialPage extends javax.swing.JFrame {
         telaCadProduto.setVisible(true);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
-    private void jMenuItem12ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        // TODO add your handling code here:
-        EditarProduto telaEditProduto = new EditarProduto();
-        jDesktopPane1.add(telaEditProduto);
-        telaEditProduto.setVisible(true);
-    }//GEN-LAST:event_jMenuItem12ActionPerformed
-
     private void jMenuItem4ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         CadastroProfissional telaCadProfissional = new CadastroProfissional();
         jDesktopPane1.add(telaCadProfissional);
         telaCadProfissional.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void jMenuItem6ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-        EditarProfissional telaEditProfissional = new EditarProfissional();
-        jDesktopPane1.add(telaEditProfissional);
-        telaEditProfissional.setVisible(true);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void jMenuItem13ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        // TODO add your handling code here:
-        CadastroLoja telaCadLoja = new CadastroLoja();
-        jDesktopPane1.add(telaCadLoja);
-        telaCadLoja.setVisible(true);
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem2ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
@@ -431,27 +300,16 @@ public class InicialPage extends javax.swing.JFrame {
     private JMenu jMenu2;
     private JMenu jMenu4;
     private JMenu jMenu5;
-    private JMenu jMenu6;
-    private JMenu jMenu7;
     private JMenu jMenu8;
     private JMenuBar jMenuBar1;
     private JMenuItem jMenuItem1;
     private JMenuItem jMenuItem10;
     private JMenuItem jMenuItem11;
-    private JMenuItem jMenuItem12;
-    private JMenuItem jMenuItem13;
-    private JMenuItem jMenuItem14;
-    private JMenuItem jMenuItem16;
-    private JMenuItem jMenuItem17;
-    private JMenuItem jMenuItem18;
     private JMenuItem jMenuItem19;
     private JMenuItem jMenuItem2;
-    private JMenuItem jMenuItem20;
     private JMenuItem jMenuItem21;
-    private JMenuItem jMenuItem3;
     private JMenuItem jMenuItem4;
     private JMenuItem jMenuItem5;
-    private JMenuItem jMenuItem6;
     private JLabel txtConectadoComo;
     // End of variables declaration//GEN-END:variables
 

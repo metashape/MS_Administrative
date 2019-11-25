@@ -1,25 +1,25 @@
 package br.com.metashape.utils;
-
+import br.com.metashape.lojas.*;
+import br.com.metashape.funcionarios.*;
+import br.com.metashape.produtos.*;
+import br.com.metashape.controle.ControleEstoque.*;
 /**
  *
  * @author pedrobertolini
  */
-public class RepException extends Exception{    
-    
+public class DiretorioException extends Exception {
     private Exception exception;
 
-    public RepException(Exception exception) {
+    public DiretorioException(Exception exception) {
         super("Exceção encapsulada");
         this.exception = exception;
     }
 
-    @Override
     public String getMessage() {
         return exception.getMessage();
     }
 
-    @Override
     public void printStackTrace() {
+        exception.printStackTrace();
     }
-    
 }
