@@ -188,25 +188,14 @@ public class CadastroProduto extends javax.swing.JInternalFrame {
     private javax.swing.JFormattedTextField valor;
     // End of variables declaration//GEN-END:variables
     private ControleEstoque controleEstoque;
-    Produto n;
+    private Produto n;
+    
     private void cadastrar() throws DiretorioException {
         try {
-            String sku = nomeDoProduto.getText();
-            n = new Produto();
-            n.setCod_sku(this.códigoSKU.getText());
-            n.setAtivo(true);
-            n.setCategoria(this.categoriaDropDown.getActionCommand());
-            n.setSabor_cor(this.saborCor.getActionCommand());
-            n.setNome_sku(this.nomeDoProduto.getText());
-            n.setDescricao(this.descricao.getText());
-            n.setValor(this.valor.getText());
-            n.setQuantidade(Integer.parseInt(this.qtdd.getText()));
-            try {
-                controleEstoque.cadastrar(n);
-            } catch (ProdutoNaoEncontradoException | ProdutoJaCadastradoException ex) {
-                Logger.getLogger(CadastroProduto.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } catch (DiretorioException ex) {
+            this.controleEstoque = new ControleEstoque();
+            this.n = new Produto(this.códigoSKU.getText(), this.nomeDoProduto.getText(), this.saborCor.toString(), this.descricao.getText(), this.categoriaDropDown.toString(), Integer.parseInt(this.qtdd.getText()), this.valor.getText()); 
+            this.controleEstoque.cadastrar(n);
+        } catch (DiretorioException | ProdutoNaoEncontradoException | ProdutoJaCadastradoException ex) {
             Logger.getLogger(CadastroProduto.class.getName()).log(Level.SEVERE, null, ex);
         }finally {
             limparCampos();

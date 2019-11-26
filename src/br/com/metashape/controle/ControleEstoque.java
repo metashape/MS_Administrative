@@ -16,7 +16,7 @@ import br.com.metashape.produtos.ProdutoNaoEncontradoException;
 import br.com.metashape.produtos.InterfaceProduto;
 import br.com.metashape.utils.DiretorioException;
 import br.com.metashape.produtos.DiretorioProdutosLista;
-import br.com.metashape.view.CadastroLoja;
+import br.com.metashape.lojas.CadastrarLoja;
 
 /**
  *
@@ -26,7 +26,7 @@ public class ControleEstoque {
 
     private CadastroProdutos produtos;
     private CadastroFuncionarios funcionarios;
-    private CadastroLoja lojas;
+    private CadastrarLoja lojas;
 
     public ControleEstoque() {
         initCadastros();
@@ -37,81 +37,81 @@ public class ControleEstoque {
         DiretorioFuncionarios repositorioFuncionarios = new DiretorioFuncionariosArr();
         DiretorioLoja repositorioLojas = new DiretorioLoja();
         InterfaceProduto repositorioProdutos = new DiretorioProdutosLista();
-        produtos = new CadastroProdutos(repositorioProdutos);
-        funcionarios = new CadastroFuncionarios(repositorioFuncionarios);
-        lojas = new CadastroLoja(repositorioLojas);
+        this.produtos = new CadastroProdutos(repositorioProdutos);
+        this.funcionarios = new CadastroFuncionarios(repositorioFuncionarios);
+        this.lojas = new CadastrarLoja(repositorioLojas);
 
     }
 
     //Metodos Produto
     public void cadastrar(Produto produto) throws ProdutoNaoEncontradoException, ProdutoJaCadastradoException, DiretorioException {
-        produtos.cadastrar(produto);
+        this.produtos.cadastrar(produto);
     }
 
     public void removerProduto(String nome) throws ProdutoNaoEncontradoException, DiretorioException {
-        produtos.remover(nome);
+        this.produtos.remover(nome);
     }
 
     public void atualizar(Produto produto) throws ProdutoNaoEncontradoException, DiretorioException {
-        produtos.atualizar(produto);
+        this.produtos.atualizar(produto);
     }
 
     public Produto procurarProduto(String nome) throws ProdutoNaoEncontradoException {
-        return produtos.procurar(nome);
+        return this.produtos.procurar(nome);
     }
 
     //Metodos Funcionario
     public void cadastrar(Funcionario funcionario) throws FuncionarioJaCadastradoException, DiretorioException {
-        funcionarios.cadastrar(funcionario);
+        this.funcionarios.cadastrar(funcionario);
     }
 
     public void removerFuncionario(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException {
-        funcionarios.remover(matricula);
+        this.funcionarios.remover(matricula);
     }
 
     public Funcionario procurarFuncionario(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException {
-        return funcionarios.procurar(matricula);
+        return this.funcionarios.procurar(matricula);
     }
 
     public Funcionario procurarFuncionarioPorNome(String nome) throws FuncionarioNaoEncontradoException, DiretorioException {
-        return funcionarios.procurarPorNome(nome);
+        return this.funcionarios.procurarPorNome(nome);
     }
 
     public DiretorioFuncionarios getFuncionarios() throws DiretorioException {
-        return funcionarios.getFuncionarios();
+        return this.funcionarios.getFuncionarios();
     }
 
     public void atualizar(Funcionario funcionario) throws FuncionarioNaoEncontradoException, DiretorioException {
-        funcionarios.atualizar(funcionario);
+        this.funcionarios.atualizar(funcionario);
     }
 
     //Metodos Loja
     public void cadastrar(Loja loja) throws LojaJaCadastradaException, DiretorioException {
-        lojas.cadastrar(loja);
+        this.lojas.cadastrar(loja);
     }
 
     public void atualizar(Loja loja) throws LojaJaCadastradaException, DiretorioException, LojaNaoEncontradaException {
-        lojas.atualizar(loja);
+        this.lojas.atualizar(loja);
     }
 
     public void removerLoja(String descricao) throws LojaJaCadastradaException, DiretorioException, LojaNaoEncontradaException {
-        lojas.remover(descricao);
+        this.lojas.remover(descricao);
     }
 
     public boolean existeLoja(String descricao) throws DiretorioException {
-        return lojas.existe(descricao);
+        return this.lojas.existe(descricao);
     }
 
     public Loja procurarLoja(String descricao) throws LojaJaCadastradaException, DiretorioException, LojaNaoEncontradaException {
-        return lojas.procurar(descricao);
+        return this.lojas.procurar(descricao);
     }
 
     public Loja[] listarTudoLojas() throws DiretorioException {
-        return lojas.listarTudo();
+        return this.lojas.listarTudo();
     }
 
     public Funcionario[] listarTudoFuncionarios() throws DiretorioException {
-        return funcionarios.listarTudo();
+        return this.funcionarios.listarTudo();
     }
 
 }
