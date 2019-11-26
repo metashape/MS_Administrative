@@ -1,13 +1,11 @@
 package br.com.metashape.utils;
-import br.com.metashape.lojas.*;
-import br.com.metashape.funcionarios.*;
-import br.com.metashape.produtos.*;
-import br.com.metashape.controle.ControleEstoque.*;
+
 /**
  *
  * @author pedrobertolini
  */
 public class DiretorioException extends Exception {
+
     private Exception exception;
 
     public DiretorioException(Exception exception) {
@@ -16,10 +14,10 @@ public class DiretorioException extends Exception {
     }
 
     public String getMessage() {
-        return exception.getMessage();
+        return this.exception.getMessage();
     }
 
     public void printStackTrace() {
-        exception.printStackTrace();
+        this.exception.printStackTrace();
     }
 }

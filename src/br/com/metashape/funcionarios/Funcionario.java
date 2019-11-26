@@ -1,17 +1,18 @@
 package br.com.metashape.funcionarios;
 
 import br.com.metashape.utils.Usuario;
+
 /**
  *
  * @author pedrobertolini
  */
 public class Funcionario extends Usuario {
-  
+
     private String matricula;
     private String especialidade;
     private float salario;
 
-      public Funcionario(String matricula, String especialidade, float salario, String nome, String email, String senha) {
+    public Funcionario(String matricula, String especialidade, float salario, String nome, String email, String senha) {
         super(nome, email, senha);
         this.matricula = matricula;
         this.especialidade = especialidade;
@@ -19,7 +20,7 @@ public class Funcionario extends Usuario {
     }
 
     public String getMatricula() {
-        return matricula;
+        return this.matricula;
     }
 
     public void setMatricula(String matricula) {
@@ -27,7 +28,7 @@ public class Funcionario extends Usuario {
     }
 
     public String getEspecialidade() {
-        return especialidade;
+        return this.especialidade;
     }
 
     public void setEspecialidade(String especialidade) {
@@ -44,8 +45,7 @@ public class Funcionario extends Usuario {
 
     @Override
     public String toString() {
-        return "Funcionario{" + "matricula=" + matricula + ", especialidade=" + especialidade + ", salario=" + salario + '}';
+        return "Funcionario{" + "matricula=" + this.matricula + ", especialidade=" + this.especialidade + ", salario=" + this.salario + '}';
     }
-    
-    
+
 }

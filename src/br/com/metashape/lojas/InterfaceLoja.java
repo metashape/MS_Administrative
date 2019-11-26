@@ -8,27 +8,28 @@ import br.com.metashape.utils.DiretorioException;
  * @author pedrobertolini
  */
 public interface InterfaceLoja {
-        public void inserir(Funcionario funcionario) throws DiretorioException;
 
-	public void remover(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException;
+    public void inserir(Funcionario funcionario) throws DiretorioException;
 
-        //Busca
-	public Funcionario procurarTodos() throws FuncionarioNaoEncontradoException, DiretorioException;
-        
-        public Funcionario procurarPorNome(String nome) throws FuncionarioNaoEncontradoException, DiretorioException;
-        
-        public Funcionario procurarPorMatricula(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException;
-        
-        public Funcionario procurarPorEmail(String email) throws FuncionarioNaoEncontradoException, DiretorioException;
+    public void remover(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException;
 
-	//
-        public void atualizar(Funcionario funcionario) throws FuncionarioNaoEncontradoException, DiretorioException;
+    //Busca
+    public Funcionario procurarTodos() throws FuncionarioNaoEncontradoException, DiretorioException;
 
-	public boolean existe(String matricula) throws DiretorioException;
+    public Funcionario procurarPorNome(String nome) throws FuncionarioNaoEncontradoException, DiretorioException;
 
-        public InterfaceLoja getFuncionarios() throws DiretorioException;
-    
-        public Funcionario[] getFuncionariosCadastrados() throws DiretorioException;
+    public Funcionario procurarPorMatricula(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException;
 
-        public IteratorFuncionarios getIterator() throws DiretorioException;
+    public Funcionario procurarPorEmail(String email) throws FuncionarioNaoEncontradoException, DiretorioException;
+
+    //
+    public void atualizar(Funcionario funcionario) throws FuncionarioNaoEncontradoException, DiretorioException;
+
+    public boolean existe(String matricula) throws DiretorioException;
+
+    public InterfaceLoja getFuncionarios() throws DiretorioException;
+
+    public Funcionario[] getFuncionariosCadastrados() throws DiretorioException;
+
+    public IteratorFuncionarios getIterator() throws DiretorioException;
 }

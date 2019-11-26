@@ -5,13 +5,14 @@ package br.com.metashape.lojas;
  * @author pedrobertolini
  */
 public class Loja {
-   private int id_store;
-   private String fancy_name;
-   private String cnpj;
-   private String State_registration;
-   private String store_address;
-   private String descricao;
-   private boolean available;
+
+    private int id_store;
+    private String fancy_name;
+    private String cnpj;
+    private String State_registration;
+    private String store_address;
+    private String descricao;
+    private boolean available;
 
     public Loja(int id_store, String fancy_name, String cnpj, String State_registration, String store_address, String descricao, boolean available) {
         this.id_store = id_store;
@@ -23,14 +24,12 @@ public class Loja {
         this.available = available;
     }
 
-   
-
     public int getId_store() {
-        return id_store;
+        return this.id_store;
     }
 
     public String getFancy_name() {
-        return fancy_name;
+        return this.fancy_name;
     }
 
     public void setFancy_name(String fancy_name) {
@@ -38,7 +37,7 @@ public class Loja {
     }
 
     public String getCnpj() {
-        return cnpj;
+        return this.cnpj;
     }
 
     public void setCnpj(String cnpj) {
@@ -46,7 +45,7 @@ public class Loja {
     }
 
     public String getState_registration() {
-        return State_registration;
+        return this.State_registration;
     }
 
     public void setState_registration(String State_registration) {
@@ -54,7 +53,7 @@ public class Loja {
     }
 
     public String getStore_address() {
-        return store_address;
+        return this.store_address;
     }
 
     public void setStore_address(String store_address) {
@@ -62,7 +61,7 @@ public class Loja {
     }
 
     public boolean isAvailable() {
-        return available;
+        return this.available;
     }
 
     public void setAvailable(boolean available) {
@@ -71,26 +70,15 @@ public class Loja {
 
     @Override
     public String toString() {
-        return "Loja{" + "id_store=" + id_store + ", fancy_name=" + fancy_name + ", cnpj=" + cnpj + ", State_registration=" + State_registration + ", store_address=" + store_address + ", available=" + available + '}';
+        return "Loja{" + "id_store=" + this.id_store + ", fancy_name=" + this.fancy_name + ", cnpj=" + this.cnpj + ", State_registration=" + this.State_registration + ", store_address=" + this.store_address + ", available=" + this.available + '}';
     }
 
     public String getDescricao() {
-        return descricao;
+        return this.descricao;
     }
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
-    
-
-   
-   
-   
-   
-   
-   
-   
-   
-   
 }

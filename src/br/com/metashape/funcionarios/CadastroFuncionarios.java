@@ -17,8 +17,8 @@ public class CadastroFuncionarios {
     public void cadastrar(Funcionario funcionario)
             throws FuncionarioJaCadastradoException, DiretorioException {
         if (funcionario != null) {
-            if (!funcionarios.existe(funcionario.getMatricula())) {
-                funcionarios.inserir(funcionario);
+            if (!this.funcionarios.existe(funcionario.getMatricula())) {
+                this.funcionarios.inserir(funcionario);
             } else {
                 throw new FuncionarioJaCadastradoException(funcionario
                         .getMatricula());
@@ -30,34 +30,34 @@ public class CadastroFuncionarios {
 
     public void remover(String matricula)
             throws FuncionarioNaoEncontradoException, DiretorioException {
-        funcionarios.remover(matricula);
+        this.funcionarios.remover(matricula);
     }
 
     public boolean existe(String matricula) throws DiretorioException {
-        return funcionarios.existe(matricula);
+        return this.funcionarios.existe(matricula);
     }
 
     public DiretorioFuncionarios getFuncionarios()
             throws DiretorioException {
-        return funcionarios.getFuncionarios();
+        return this.funcionarios.getFuncionarios();
     }
 
     public Funcionario procurar(String matricula)
             throws FuncionarioNaoEncontradoException, DiretorioException {
-        return funcionarios.procurar(matricula);
+        return this.funcionarios.procurar(matricula);
     }
 
     public Funcionario procurarPorNome(String nome) throws FuncionarioNaoEncontradoException, DiretorioException {
-        return funcionarios.procurar(nome);
+        return this.funcionarios.procurar(nome);
     }
 
     public void atualizar(Funcionario funcionario)
             throws FuncionarioNaoEncontradoException, DiretorioException {
-        funcionarios.atualizar(funcionario);
+        this.funcionarios.atualizar(funcionario);
     }
 
     public Funcionario[] listarTudo() throws DiretorioException {
-        return funcionarios.getFuncionariosCadastrados();
+        return this.funcionarios.getFuncionariosCadastrados();
     }
 
 }

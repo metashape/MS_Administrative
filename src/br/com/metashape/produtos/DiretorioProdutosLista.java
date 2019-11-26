@@ -19,26 +19,28 @@ public class DiretorioProdutosLista implements InterfaceProduto {
         this.proximo = null;
     }
 
+    @Override
     public void atualizar(Produto produto) throws ProdutoNaoEncontradoException {
         if (this.produto != null) {
             if (this.produto.getDescricao().equals(
                     produto.getDescricao())) {
                 this.produto = produto;
             } else {
-                proximo.atualizar(produto);
+                this.proximo.atualizar(produto);
             }
         } else {
             throw new ProdutoNaoEncontradoException();
         }
     }
 
+    @Override
     public boolean existe(String nome) {
         boolean resposta;
         if (this.produto != null) {
             if (this.produto.getDescricao().equals(nome)) {
                 resposta = true;
             } else {
-                resposta = proximo.existe(nome);
+                resposta = this.proximo.existe(nome);
             }
         } else {
             resposta = false;
@@ -58,7 +60,7 @@ public class DiretorioProdutosLista implements InterfaceProduto {
         boolean resultado = existe(produto.getDescricao());
         if (resultado == false) {
             if (this.produto != null) {
-                proximo.inserir(produto);
+                this.proximo.inserir(produto);
             } else {
                 this.produto = produto;
                 this.proximo = new DiretorioProdutosLista();
@@ -75,7 +77,7 @@ public class DiretorioProdutosLista implements InterfaceProduto {
             if (this.produto.getDescricao().equals(nome)) {
                 resposta = this.produto;
             } else {
-                resposta = proximo.procurar(nome);
+                resposta = this.proximo.procurar(nome);
             }
         } else {
             throw new ProdutoNaoEncontradoException();

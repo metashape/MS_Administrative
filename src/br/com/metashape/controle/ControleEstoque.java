@@ -1,7 +1,7 @@
 package br.com.metashape.controle;
 import br.com.metashape.funcionarios.CadastroFuncionarios;
 import br.com.metashape.funcionarios.DiretorioFuncionarios;
-import br.com.metashape.funcionarios.DiretorioFuncionariosArr;
+import br.com.metashape.funcionarios.DiretorioFuncionariosArray;
 import br.com.metashape.funcionarios.Funcionario;
 import br.com.metashape.funcionarios.FuncionarioJaCadastradoException;
 import br.com.metashape.funcionarios.FuncionarioNaoEncontradoException;
@@ -34,7 +34,7 @@ public class ControleEstoque {
 
     public void initCadastros() {
 
-        DiretorioFuncionarios repositorioFuncionarios = new DiretorioFuncionariosArr();
+        DiretorioFuncionarios repositorioFuncionarios = new DiretorioFuncionariosArray();
         DiretorioLoja repositorioLojas = new DiretorioLoja();
         InterfaceProduto repositorioProdutos = new DiretorioProdutosLista();
         this.produtos = new CadastroProdutos(repositorioProdutos);

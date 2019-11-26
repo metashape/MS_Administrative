@@ -1,12 +1,11 @@
 package br.com.metashape.utils;
-import java.awt.Image;
-import java.util.ArrayList;
-import java.util.Arrays;
+
 /**
  *
  * @author pedrobertolini
  */
-public class Sku {        
+public class Sku {
+
     public int cod_sku;
     private String nome_sku;
     private String sabor_cor;
@@ -22,8 +21,9 @@ public class Sku {
         this.categoria = categoria;
         this.ativo = true;
     }
-     public int getCod_sku() {
-        return cod_sku;
+
+    public int getCod_sku() {
+        return this.cod_sku;
     }
 
     public void setCod_sku(int cod_sku) {
@@ -31,7 +31,7 @@ public class Sku {
     }
 
     public String getNome_sku() {
-        return nome_sku;
+        return this.nome_sku;
     }
 
     public void setNome_sku(String nome_sku) {
@@ -39,7 +39,7 @@ public class Sku {
     }
 
     public String getSabor_cor() {
-        return sabor_cor;
+        return this.sabor_cor;
     }
 
     public void setSabor_cor(String sabor_cor) {
@@ -47,7 +47,7 @@ public class Sku {
     }
 
     public String getDescricao() {
-        return descricao;
+        return this.descricao;
     }
 
     public void setDescricao(String decricao) {
@@ -55,7 +55,7 @@ public class Sku {
     }
 
     public String getCategoria() {
-        return categoria;
+        return this.categoria;
     }
 
     public void setCategoria(String categoria) {
@@ -63,7 +63,7 @@ public class Sku {
     }
 
     public boolean isAtivo() {
-        return ativo;
+        return this.ativo;
     }
 
     public void setAtivo(boolean ativo) {

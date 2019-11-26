@@ -1,4 +1,5 @@
 package br.com.metashape.utils;
+
 /**
  *
  * @author pedrobertolini
@@ -22,7 +23,7 @@ public class Usuario {
     }
 
     public boolean isAtivo() {
-        return ativo;
+        return this.ativo;
     }
 
     public void setAtivo(boolean ativo) {
@@ -30,11 +31,11 @@ public class Usuario {
     }
 
     public int getId_usuario() {
-        return id_usuario;
+        return this.id_usuario;
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -42,7 +43,7 @@ public class Usuario {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -50,7 +51,7 @@ public class Usuario {
     }
 
     public String getSenha() {
-        return senha;
+        return this.senha;
     }
 
     public void setSenha(String senha) {
@@ -59,14 +60,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "id_usuario=" + id_usuario + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", ativo=" + ativo;
+        return "id_usuario=" + this.id_usuario + ", nome=" + this.nome + ", email=" + this.email + ", senha=" + this.senha + ", ativo=" + this.ativo;
     }
-    
-    
-    
-    
-    
-    
-   
 
 }

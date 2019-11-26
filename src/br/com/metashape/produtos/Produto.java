@@ -1,8 +1,5 @@
 package br.com.metashape.produtos;
-import br.com.metashape.utils.Sku;
-import java.awt.Image;
-import java.util.Date;
-import javax.swing.JFormattedTextField;
+
 /**
  *
  * @author pedrobertolini
@@ -33,7 +30,7 @@ public class Produto {
     }
 
     public String getCod_sku() {
-        return cod_sku;
+        return this.cod_sku;
     }
 
     public void setCod_sku(String cod_sku) {
@@ -41,7 +38,7 @@ public class Produto {
     }
 
     public String getNome_sku() {
-        return nome_sku;
+        return this.nome_sku;
     }
 
     public void setNome_sku(String nome_sku) {
@@ -49,7 +46,7 @@ public class Produto {
     }
 
     public String getSabor_cor() {
-        return sabor_cor;
+        return this.sabor_cor;
     }
 
     public void setSabor_cor(String sabor_cor) {
@@ -57,7 +54,7 @@ public class Produto {
     }
 
     public String getDescricao() {
-        return descricao;
+        return this.descricao;
     }
 
     public void setDescricao(String descricao) {
@@ -65,7 +62,7 @@ public class Produto {
     }
 
     public String getCategoria() {
-        return categoria;
+        return this.categoria;
     }
 
     public void setCategoria(String categoria) {
@@ -73,7 +70,7 @@ public class Produto {
     }
 
     public boolean isAtivo() {
-        return ativo;
+        return this.ativo;
     }
 
     public void setAtivo(boolean ativo) {
@@ -81,7 +78,7 @@ public class Produto {
     }
 
     public int getQuantidade() {
-        return quantidade;
+        return this.quantidade;
     }
 
     public void setQuantidade(int quantidade) {
@@ -89,7 +86,7 @@ public class Produto {
     }
 
     public String getValor() {
-        return valor;
+        return this.valor;
     }
 
     public void setValor(String valor) {
@@ -98,8 +95,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "cod_sku=" + cod_sku + ", nome_sku=" + nome_sku + ", sabor_cor=" + sabor_cor + ", descricao=" + descricao + ", categoria=" + categoria + ", ativo=" + ativo + ", quantidade=" + quantidade + ", valor=" + valor;
+        return "cod_sku=" + this.cod_sku + ", nome_sku=" + this.nome_sku + ", sabor_cor=" + this.sabor_cor + ", descricao=" + this.descricao + ", categoria=" + this.categoria + ", ativo=" + this.ativo + ", quantidade=" + this.quantidade + ", valor=" + this.valor;
     }
 
-   
 }
