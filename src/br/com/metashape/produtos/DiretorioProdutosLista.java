@@ -71,10 +71,11 @@ public class DiretorioProdutosLista implements InterfaceProduto {
 
     }
 
+    @Override
     public Produto procurar(String nome) throws ProdutoNaoEncontradoException {
         Produto resposta = null;
         if (this.produto != null) {
-            if (this.produto.getDescricao().equals(nome)) {
+            if (this.produto.getDescricao().contains(nome)) {
                 resposta = this.produto;
             } else {
                 resposta = this.proximo.procurar(nome);

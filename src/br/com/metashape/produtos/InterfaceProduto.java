@@ -12,8 +12,10 @@ public interface InterfaceProduto {
             ProdutoJaCadastradoException;
 
     public void remover(String nome) throws ProdutoNaoEncontradoException, DiretorioException;
-
+    
     //Busca
+    public Produto procurar(String nome) throws ProdutoNaoEncontradoException, DiretorioException;
+    
     public Object[] procurarTodos() throws ProdutoNaoEncontradoException, DiretorioException;
 
     public Produto procurarPorNome(String nome) throws ProdutoNaoEncontradoException, DiretorioException;

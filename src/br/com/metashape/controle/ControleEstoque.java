@@ -24,7 +24,7 @@ import br.com.metashape.lojas.CadastrarLoja;
  */
 public class ControleEstoque {
 
-    private CadastroProdutos produtos;
+    private InterfaceProduto produtos;
     private CadastroFuncionarios funcionarios;
     private CadastrarLoja lojas;
 
@@ -36,8 +36,8 @@ public class ControleEstoque {
 
         DiretorioFuncionarios repositorioFuncionarios = new DiretorioFuncionariosArray();
         DiretorioLoja repositorioLojas = new DiretorioLoja();
-        InterfaceProduto repositorioProdutos = new DiretorioProdutosLista();
-        this.produtos = new CadastroProdutos(repositorioProdutos);
+        //InterfaceProduto repositorioProdutos = new DiretorioProdutosLista();
+        this.produtos = new DiretorioProdutosLista();
         this.funcionarios = new CadastroFuncionarios(repositorioFuncionarios);
         this.lojas = new CadastrarLoja(repositorioLojas);
 
@@ -45,7 +45,7 @@ public class ControleEstoque {
 
     //Metodos Produto
     public void cadastrar(Produto produto) throws ProdutoNaoEncontradoException, ProdutoJaCadastradoException, DiretorioException {
-        this.produtos.cadastrar(produto);
+        this.produtos.inserir(produto);
     }
 
     public void removerProduto(String nome) throws ProdutoNaoEncontradoException, DiretorioException {
@@ -56,7 +56,7 @@ public class ControleEstoque {
         this.produtos.atualizar(produto);
     }
 
-    public Produto procurarProduto(String nome) throws ProdutoNaoEncontradoException {
+    public Produto procurarProduto(String nome) throws ProdutoNaoEncontradoException, DiretorioException {
         return this.produtos.procurar(nome);
     }
 

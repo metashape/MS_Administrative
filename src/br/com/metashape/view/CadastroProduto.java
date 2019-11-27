@@ -14,13 +14,15 @@ import javax.swing.JOptionPane;
  * @author pedrobertolini
  */
 public class CadastroProduto extends javax.swing.JInternalFrame {
-
-   
-
+    
+    private ControleEstoque cE;
+    
     /**
      * Creates new form CadastroLoja
+     * @param cE
      */
-    public CadastroProduto() {
+    public CadastroProduto(ControleEstoque cE) {
+        this.cE = cE;
         initComponents();       
   }
   
@@ -187,14 +189,12 @@ public class CadastroProduto extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> saborCor;
     private javax.swing.JFormattedTextField valor;
     // End of variables declaration//GEN-END:variables
-    private ControleEstoque controleEstoque;
     private Produto n;
     
     private void cadastrar() throws DiretorioException {
         try {
-            this.controleEstoque = new ControleEstoque();
             this.n = new Produto(this.códigoSKU.getText(), this.nomeDoProduto.getText(), this.saborCor.toString(), this.descricao.getText(), this.categoriaDropDown.toString(), Integer.parseInt(this.qtdd.getText()), this.valor.getText()); 
-            this.controleEstoque.cadastrar(n);
+            this.cE.cadastrar(n);
         } catch (DiretorioException | ProdutoNaoEncontradoException | ProdutoJaCadastradoException ex) {
             Logger.getLogger(CadastroProduto.class.getName()).log(Level.SEVERE, null, ex);
         }finally {

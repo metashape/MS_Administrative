@@ -5,6 +5,7 @@
  */
 package br.com.metashape.view;
 
+import br.com.metashape.controle.ControleEstoque;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -46,12 +47,12 @@ public class InicialPage extends javax.swing.JFrame {
      * Creates new form login
      */
     
-   
+   private ControleEstoque cE;
     
     public InicialPage() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/image/ms-icon.png")).getImage());
-        
+        this.cE = new ControleEstoque();
     }
 
     
@@ -227,7 +228,7 @@ public class InicialPage extends javax.swing.JFrame {
 
     private void jMenuItem10ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
-        CadastroProduto telaCadProduto = new CadastroProduto();
+        CadastroProduto telaCadProduto = new CadastroProduto(this.cE);
         jDesktopPane1.add(telaCadProduto);
         telaCadProduto.setVisible(true);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
@@ -248,7 +249,7 @@ public class InicialPage extends javax.swing.JFrame {
 
     private void jMenuItem11ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         // TODO add your handling code here:
-        BuscarProduto telaBuscarProduto = new BuscarProduto();
+        BuscarProduto telaBuscarProduto = new BuscarProduto(this.cE);
         jDesktopPane1.add(telaBuscarProduto);
         telaBuscarProduto.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed

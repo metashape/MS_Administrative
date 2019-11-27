@@ -5,16 +5,27 @@
  */
 package br.com.metashape.view;
 
+import br.com.metashape.controle.ControleEstoque;
+import br.com.metashape.produtos.Produto;
+import br.com.metashape.produtos.ProdutoNaoEncontradoException;
+import br.com.metashape.utils.DiretorioException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author pedrobertolini
  */
 public class BuscarProduto extends javax.swing.JInternalFrame {
 
+    private ControleEstoque cE;
+
     /**
      * Creates new form CadastroLoja
      */
-    public BuscarProduto() {
+    public BuscarProduto(ControleEstoque cE) {
+        this.cE = cE;
         initComponents();
     }
 
@@ -140,7 +151,16 @@ public class BuscarProduto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            Produto procurado = this.cE.procurarProduto(this.jTextField2.getText());
+            
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            Object[] linha = {procurado.getSabor_cor(), procurado.getCod_sku(), procurado.getDescricao(), procurado.getNome_sku(), procurado.getQuantidade(), procurado.getValor()};
+            model.addRow(linha);
+        } catch (ProdutoNaoEncontradoException | DiretorioException ex) {
+            Logger.getLogger(BuscarProduto.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
