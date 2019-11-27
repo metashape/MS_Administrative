@@ -1,12 +1,14 @@
 package br.com.metashape.lojas;
 
+import br.com.metashape.funcionarios.Funcionario;
+import br.com.metashape.funcionarios.FuncionarioNaoEncontradoException;
 import br.com.metashape.utils.DiretorioException;
 
 /**
  *
  * @author pedrobertolini
  */
-public class DiretorioLoja {
+public class DiretorioLoja implements InterfaceLoja{
 
     private Loja loja;
     private DiretorioLoja proximo;
@@ -16,6 +18,7 @@ public class DiretorioLoja {
         this.proximo = null;
     }
 
+    @Override
     public void inserir(Loja loja) {
         if (this.loja != null) {
             this.proximo.inserir(loja);
@@ -25,6 +28,7 @@ public class DiretorioLoja {
         }
     }
 
+    @Override
     public void atualizar(Loja loja) {
         if (this.loja != null) {
             if (this.loja.getDescricao().equals(loja.getDescricao())) {
@@ -37,6 +41,7 @@ public class DiretorioLoja {
         }
     }
 
+    @Override
     public void remover(String loja) {
         if (this.loja != null) {
             if (this.loja.getDescricao().equals(loja)) {
@@ -64,6 +69,7 @@ public class DiretorioLoja {
         return resposta;
     }
 
+    @Override
     public boolean existe(String descricao) {
         boolean resposta;
         if (this.loja != null) {
@@ -106,11 +112,13 @@ public class DiretorioLoja {
         }
     }
 
+    @Override
     public Loja[] getLojas() throws DiretorioException {
         // TODO Auto-generated method stub
         return null;
     }
 
+    @Override
     public IteratorLojas getIterator() throws DiretorioException {
         // TODO Auto-generated method stub
         return null;
@@ -119,5 +127,70 @@ public class DiretorioLoja {
     public Loja[] listarTudo() throws DiretorioException {
         // TODO Auto-generated method stub
         return null;
+    }
+
+    /*@Override
+    public void inserir(Loja loja) throws DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja procurarTodos() throws LojaNaoEncontradoException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja procurarPorNome(String nome) throws LojaNaoEncontradoException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja procurarPorMatricula(String matricula) throws LojaNaoEncontradoException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja procurarPorEmail(String email) throws LojaNaoEncontradoException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void atualizar(Loja funcionario) throws LojaNaoEncontradoException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public InterfaceLoja getLojas() throws DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja[] getLojasCadastrados() throws DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }*/
+
+    @Override
+    public Loja procurarTodos() throws LojaNaoEncontradaException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja procurarPorNome(String nome) throws LojaNaoEncontradaException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja procurarPorMatricula(String matricula) throws LojaNaoEncontradaException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja procurarPorEmail(String email) throws LojaNaoEncontradaException, DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Loja[] getLojasCadastrados() throws DiretorioException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

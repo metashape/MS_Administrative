@@ -110,6 +110,7 @@ public class BuscarProduto extends javax.swing.JInternalFrame {
                 "Nome Fantasia", "CNPJ", "E-mail", "Endereço", "Estado", "Status"
             }
         ));
+        jTable1.setRequestFocusEnabled(false);
         jScrollPane2.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 1000, 410));

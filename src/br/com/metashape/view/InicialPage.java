@@ -7,30 +7,17 @@ package br.com.metashape.view;
 
 import br.com.metashape.controle.ControleEstoque;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import javax.swing.BorderFactory;
-import javax.swing.GroupLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JDesktopPane;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JTextField;
 import javax.swing.KeyStroke;
-import javax.swing.LayoutStyle;
 import javax.swing.WindowConstants;
-import javax.swing.border.BevelBorder;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
 import org.netbeans.lib.awtextra.AbsoluteLayout;
 import java.awt.Image;
@@ -213,7 +200,7 @@ public class InicialPage extends javax.swing.JFrame {
 
     private void cadastrarLojaActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cadastrarLojaActionPerformed
         // TODO add your handling code here:        
-        CadastroLoja telaCadLoja = new CadastroLoja();
+        CadastroLoja telaCadLoja = new CadastroLoja(this.cE);
         jDesktopPane1.add(telaCadLoja);
         telaCadLoja.setVisible(true);
 
@@ -221,7 +208,7 @@ public class InicialPage extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        CadastroLoja telaCadLoja = new CadastroLoja();
+        CadastroLoja telaCadLoja = new CadastroLoja(this.cE);
         jDesktopPane1.add(telaCadLoja);
         telaCadLoja.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
@@ -235,14 +222,14 @@ public class InicialPage extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
-        CadastroProfissional telaCadProfissional = new CadastroProfissional();
+        CadastroProfissional telaCadProfissional = new CadastroProfissional(this.cE);
         jDesktopPane1.add(telaCadProfissional);
         telaCadProfissional.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem2ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-       BuscarLoja telaBuscarLoja = new BuscarLoja();
+       BuscarLoja telaBuscarLoja = new BuscarLoja(this.cE);
         jDesktopPane1.add(telaBuscarLoja);
         telaBuscarLoja.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed

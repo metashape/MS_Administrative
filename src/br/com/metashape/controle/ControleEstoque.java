@@ -5,6 +5,7 @@ import br.com.metashape.funcionarios.DiretorioFuncionariosArray;
 import br.com.metashape.funcionarios.Funcionario;
 import br.com.metashape.funcionarios.FuncionarioJaCadastradoException;
 import br.com.metashape.funcionarios.FuncionarioNaoEncontradoException;
+import br.com.metashape.funcionarios.InterfaceFuncionario;
 import br.com.metashape.lojas.DiretorioLoja;
 import br.com.metashape.lojas.Loja;
 import br.com.metashape.lojas.LojaJaCadastradaException;
@@ -17,6 +18,7 @@ import br.com.metashape.produtos.InterfaceProduto;
 import br.com.metashape.utils.DiretorioException;
 import br.com.metashape.produtos.DiretorioProdutosLista;
 import br.com.metashape.lojas.CadastrarLoja;
+import br.com.metashape.lojas.InterfaceLoja;
 
 /**
  *
@@ -25,21 +27,17 @@ import br.com.metashape.lojas.CadastrarLoja;
 public class ControleEstoque {
 
     private InterfaceProduto produtos;
-    private CadastroFuncionarios funcionarios;
-    private CadastrarLoja lojas;
+    private DiretorioFuncionarios funcionarios;
+    private InterfaceLoja lojas;
 
     public ControleEstoque() {
         initCadastros();
     }
 
     public void initCadastros() {
-
-        DiretorioFuncionarios repositorioFuncionarios = new DiretorioFuncionariosArray();
-        DiretorioLoja repositorioLojas = new DiretorioLoja();
-        //InterfaceProduto repositorioProdutos = new DiretorioProdutosLista();
         this.produtos = new DiretorioProdutosLista();
-        this.funcionarios = new CadastroFuncionarios(repositorioFuncionarios);
-        this.lojas = new CadastrarLoja(repositorioLojas);
+        this.funcionarios = new DiretorioFuncionariosArray();
+        this.lojas = new DiretorioLoja();
 
     }
 
@@ -62,7 +60,7 @@ public class ControleEstoque {
 
     //Metodos Funcionario
     public void cadastrar(Funcionario funcionario) throws FuncionarioJaCadastradoException, DiretorioException {
-        this.funcionarios.cadastrar(funcionario);
+        this.funcionarios.inserir(funcionario);
     }
 
     public void removerFuncionario(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException {
@@ -87,7 +85,7 @@ public class ControleEstoque {
 
     //Metodos Loja
     public void cadastrar(Loja loja) throws LojaJaCadastradaException, DiretorioException {
-        this.lojas.cadastrar(loja);
+        this.lojas.inserir(loja);
     }
 
     public void atualizar(Loja loja) throws LojaJaCadastradaException, DiretorioException, LojaNaoEncontradaException {
@@ -102,8 +100,8 @@ public class ControleEstoque {
         return this.lojas.existe(descricao);
     }
 
-    public Loja procurarLoja(String descricao) throws LojaJaCadastradaException, DiretorioException, LojaNaoEncontradaException {
-        return this.lojas.procurar(descricao);
+    public Loja procurarLoja() throws LojaJaCadastradaException, DiretorioException, LojaNaoEncontradaException {
+        return this.lojas.procurarTodos();
     }
 
     public Loja[] listarTudoLojas() throws DiretorioException {
@@ -111,7 +109,7 @@ public class ControleEstoque {
     }
 
     public Funcionario[] listarTudoFuncionarios() throws DiretorioException {
-        return this.funcionarios.listarTudo();
+        return this.funcionarios.getFuncionariosCadastrados();
     }
 
 }

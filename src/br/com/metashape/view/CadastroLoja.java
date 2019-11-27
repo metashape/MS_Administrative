@@ -5,6 +5,7 @@
  */
 package br.com.metashape.view;
 
+import br.com.metashape.controle.ControleEstoque;
 import br.com.metashape.lojas.DiretorioLoja;
 import br.com.metashape.lojas.Loja;
 
@@ -13,11 +14,13 @@ import br.com.metashape.lojas.Loja;
  * @author pedrobertolini
  */
 public class CadastroLoja extends javax.swing.JInternalFrame {
-
+    
+    private ControleEstoque cE;
     /**
      * Creates new form CadastroLoja
      */
-    public CadastroLoja() {
+    public CadastroLoja(ControleEstoque cE) {
+        this.cE = cE;
         initComponents();
     }
 

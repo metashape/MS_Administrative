@@ -5,16 +5,21 @@
  */
 package br.com.metashape.view;
 
+import br.com.metashape.controle.ControleEstoque;
+
 /**
  *
  * @author pedrobertolini
  */
 public class BuscarLoja extends javax.swing.JInternalFrame {
-
+    
+    private ControleEstoque cE;
+    
     /**
      * Creates new form CadastroLoja
      */
-    public BuscarLoja() {
+    public BuscarLoja(ControleEstoque cE) {
+        this.cE = cE;
         initComponents();
     }
 

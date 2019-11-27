@@ -9,27 +9,29 @@ import br.com.metashape.utils.DiretorioException;
  */
 public interface InterfaceLoja {
 
-    public void inserir(Funcionario funcionario) throws DiretorioException;
+    public void inserir(Loja loja) throws DiretorioException;
 
-    public void remover(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException;
+    public void remover(String matricula) throws LojaNaoEncontradaException, DiretorioException;
 
     //Busca
-    public Funcionario procurarTodos() throws FuncionarioNaoEncontradoException, DiretorioException;
+    public Loja procurarTodos() throws LojaNaoEncontradaException, DiretorioException;
 
-    public Funcionario procurarPorNome(String nome) throws FuncionarioNaoEncontradoException, DiretorioException;
+    public Loja procurarPorNome(String nome) throws LojaNaoEncontradaException, DiretorioException;
 
-    public Funcionario procurarPorMatricula(String matricula) throws FuncionarioNaoEncontradoException, DiretorioException;
+    public Loja procurarPorMatricula(String matricula) throws LojaNaoEncontradaException, DiretorioException;
 
-    public Funcionario procurarPorEmail(String email) throws FuncionarioNaoEncontradoException, DiretorioException;
+    public Loja procurarPorEmail(String email) throws LojaNaoEncontradaException, DiretorioException;
 
     //
-    public void atualizar(Funcionario funcionario) throws FuncionarioNaoEncontradoException, DiretorioException;
+    public void atualizar(Loja loja) throws LojaNaoEncontradaException, DiretorioException;
 
     public boolean existe(String matricula) throws DiretorioException;
 
-    public InterfaceLoja getFuncionarios() throws DiretorioException;
+    public Loja[] getLojas() throws DiretorioException;
 
-    public Funcionario[] getFuncionariosCadastrados() throws DiretorioException;
+    public Loja[] getLojasCadastrados() throws DiretorioException;
+    
+    public Loja[] listarTudo() throws DiretorioException;
 
-    public IteratorFuncionarios getIterator() throws DiretorioException;
+    public IteratorLojas getIterator() throws DiretorioException;
 }

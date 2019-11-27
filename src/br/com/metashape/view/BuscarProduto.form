@@ -159,6 +159,7 @@
                 <Column editable="true" title="Status" type="java.lang.Object"/>
               </Table>
             </Property>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
