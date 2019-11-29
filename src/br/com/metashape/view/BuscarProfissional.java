@@ -96,7 +96,7 @@ public class BuscarProfissional extends javax.swing.JInternalFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Nome Fantasia", "CNPJ", "E-mail", "Endereço", "Estado", "Status"
+                "Nome ", "Matricula", "E-mail", "Endereço", "Estado", "Status"
             }
         ));
         jScrollPane2.setViewportView(jTable1);
